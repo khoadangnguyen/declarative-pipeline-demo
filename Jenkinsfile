@@ -19,7 +19,7 @@ pipeline {
        }
        stage('Test On Linux') {
          agent {
-           label 'window'
+           label 'linux'
          }
          steps {
            echo "Running tests on Linux"
