@@ -9,10 +9,10 @@ pipeline {
     }
     stage('Test') {
       parallel {
-       agent {
-         label 'window'
-       }
        stage('Test On Windows') {
+         agent {
+           label 'window'
+         }
          steps {
            echo "Running tests on Windows"
          }
