@@ -9,12 +9,18 @@ pipeline {
     }
     stage('Test') {
       parallel {
+       agent {
+         label 'window'
+       }
        stage('Test On Windows') {
          steps {
            echo "Running tests on Windows"
          }
        }
        stage('Test On Linux') {
+         agent {
+           label 'window'
+         }
          steps {
            echo "Running tests on Linux"
          }
