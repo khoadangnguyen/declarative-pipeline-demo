@@ -3,6 +3,7 @@ pipeline {
    label 'linux'
   }
   stages {
+    /*
     stage('Checkout Code') {
         steps {
             sshagent(['a795e667-54e9-4f29-818e-f81c18219205']) {
@@ -10,6 +11,7 @@ pipeline {
             }
         }
     }
+    */
     stage('Build') {
       steps {
         sh 'chmod a+x run_build_script.sh'
